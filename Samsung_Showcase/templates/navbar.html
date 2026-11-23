@@ -6,12 +6,84 @@
     </a>
 
     <nav class="navbar">
-        <a class="navlink" href="{% url 'Shop' %}">Shop</a>
-        <a class="navlink" href="{% url 'Phone' %}">Phone & Tablets</a>
-        <a class="navlink" href="{% url 'Wearables' %}">Wearables</a>
-        <a class="navlink" href="{% url 'Tv' %}">TV & AV</a>
-        <a class="navlink" href="{% url 'Appliances' %}">Appliances</a>
-        <a class="navlink" href="{% url 'Pc' %}">PC & Monitors</a>
+       <div class="nav-item">
+    <button class="navlink" type="button" onclick="togglemenu('shop-menu')">
+        Shop
+    </button>
+
+    <div class="menu" id="shop-menu">
+        <a href="#">All Products</a>
+        <a href="#">Best Sellers</a>
+        <a href="#">Offers</a>
+        <a href="#">New & Featured</a>
+        <a href="#">Accessories</a>
+    </div>
+</div>
+
+       <div class="nav-item">
+        <button class="navlink" type="button" onclick="togglemenu('phone-menu')">
+            Phone & Tablets
+        </button>
+        <div class="menu" id="phone-menu">
+            <a href="#">Galaxy S Series</a>
+            <a href="#">Galaxy A Series</a>
+            <a href="#">Galaxy Z Series</a>
+            <a href="#">Accessories</a>
+        </div>
+       </div>
+
+       <div class="nav-item">
+        <button class="navlink" type="button" onclick="togglemenu('wearables-menu')">
+            Wearables
+        </button>
+        <div class="menu" id ="wearables-menu">
+            <a href="#">Galaxy Watch</a>
+            <a href="#">Galaxy Buds</a>
+            <a href="#">Galaxy Fit</a>
+        </div>
+
+       </div>
+        <div class="nav-item">
+    <button class="navlink" type="button" onclick="togglemenu('tv-menu')">
+        TV & AV
+    </button>
+
+    <div class="menu" id="tv-menu">
+        <a href="#">All TVs</a>
+        <a href="#">Neo QLED</a>
+        <a href="#">OLED TVs</a>
+        <a href="#">The Frame</a>
+        <a href="#">Soundbars</a>
+        <a href="#">Projectors</a>
+    </div>
+</div>
+       <div class="nav-item">
+    <button class="navlink" type="button" onclick="togglemenu('appliances-menu')">
+        Appliances
+    </button>
+
+    <div class="menu" id="appliances-menu">
+        <a href="#">Refrigerators</a>
+        <a href="#">Washing Machines</a>
+        <a href="#">Microwave Ovens</a>
+        <a href="#">Vacuum Cleaners</a>
+        <a href="#">Air Conditioners</a>
+    </div>
+</div>
+
+       <div class="nav-item">
+        <button class="navlink" type="button" onclick="togglemenu('pc-menu')">
+            PC & Monitors
+        </button>
+        <div class="menu" id ="pc-menu">
+            <a href="#">Galaxy Book Laptops</a>
+            <a href="#">Desktop PCs</a>
+            <a href="#">Gaming Monitors</a>
+            <a href="#">Smart Monitors</a>
+            <a href="#">All Monitors</a>
+        </div>
+       </div>
+
     </nav>
     <nav>
         <a class="icon">🔎</a>
