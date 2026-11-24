@@ -1,0 +1,11 @@
+{% comment %}
+Reusable dynamic image slot. The placeholder always reserves the space; if `url`
+is set, the image is loaded on top of it. If the image fails to load, it removes
+itself and the placeholder stays visible.
+Usage: {% include "Samsung_App/partials/media.html" with url=... alt="..." css_class="..." label="..." size="..." %}
+{% endcomment %}
+<div class="media image-placeholder {{ css_class }}"{% if not url %} role="img" aria-label="{{ alt }} (image placeholder)"{% endif %}>
+    <span aria-hidden="true">{{ label|default:"Image" }}</span>
+    {% if size %}<small aria-hidden="true">{{ size }}</small>{% endif %}
+    {% if url %}<img src="{{ url }}" alt="{{ alt }}" loading="lazy" onerror="this.remove()">{% endif %}
+</div>
